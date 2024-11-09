@@ -1,0 +1,21 @@
+// HDL file for the logic circuit
+CHIP A5Q2<your_student_ID> {
+    IN W, N, Y;
+    OUT T;
+
+    PARTS:
+    // AND gate for W and N
+    AND(a=W, b=N, out=And1Out);
+    
+    // AND gate for N and Y
+    AND(a=N, b=Y, out=And2Out);
+    
+    // OR gate for the outputs of both AND gates
+    OR(a=And1Out, b=And2Out, out=OrOut);
+    
+    // NOT gate to invert the output of OR gate
+    NOT(in=OrOut, out=NotOut);
+    
+    // Final AND gate to produce the output T
+    AND(a=NotOut, b=W, out=T);
+}
