@@ -1,5 +1,5 @@
 // HDL file for the logic circuit
-CHIP A5Q2<your_student_ID> {
+CHIP A5Q2<201849171> {
     IN W, N, Y;
     OUT T;
 
